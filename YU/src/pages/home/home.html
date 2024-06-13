@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <div text-left><ion-icon name="ionic"></ion-icon>YU</div>
+      <div text-center><ion-icon name="home" margin-right></ion-icon>Home</div>
+    </ion-title>
+    <ion-searchbar></ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header><ion-icon name="pin" margin-right></ion-icon><b>Live Feed</b></ion-list-header>
+    <button ion-item (click)="fetchDetails(item)" *ngFor="let item of items">
+      <h2>{{item.place}}</h2>
+      <p>CO2: {{item.Co2}}PPM, H2S: {{item.H2s}}PPM, SO2: {{item.So2}}PPM, NO3: {{item.No3}}PPM</p>
+    </button>
+  </ion-list>
+</ion-content>

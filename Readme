@@ -1,0 +1,36 @@
+----------------------------------------------------------------------
+-------->PROJECT YU (AN AIR POLLUTION MONITORING SYSTEM)<-------------
+----------------------------------------------------------------------
+
+This file contains all the steps required to start the Project YU.
+
+**********PREREQUISITES************
+
+1. System must have the following things installed
+ -> Ionic v3.0
+ -> Nodejs
+ -> Python 3
+ -> MongoDb
+ 
+2. Before executing server code, it must be ensured that a MongoDb instance is up and running. Which can done by following command
+                                
+                                "$ sudo systemctl start mongodb"
+                                
+**********STEPS TO START THE PROJECT***********
+
+1. First the server needs to be initialised, which can be done by running the file "main.js" located at "YU-Major Project/Server/"
+   with the following command
+                                
+                                "node main.js"
+                                
+2. After the server is up and running you need to run the device handler to monitor the gas data from atmosphere and for sending the
+   same to the server. To run the handler code located at "YU-Major Project/RPI-Code/" , execute the following command from terminal
+   after cd-ing into the directory.
+                                
+                                "python handler.py"
+                                
+    NOTE: Make sure you have the permission to access the port on which the device is connected else the handler will throw a permission error.
+    
+3. To run the mobile app code on your system you can run the ionic's development server by running the following command in the "YU-Major Project/YU/" directory.
+                                
+                                "ionic serve"

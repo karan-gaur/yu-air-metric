@@ -1,0 +1,41 @@
+<!--
+  Generated template for the DetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="area" >
+    <h2><u>{{area.place}}</u></h2>
+    <h4>Present Staus</h4>
+   
+
+    <ion-card>
+        <ion-card-header>
+          Air Quality
+        </ion-card-header>
+        <ion-card-content>
+          <canvas #barCanvas></canvas>
+        </ion-card-content>
+    </ion-card>
+  
+    
+ </div>
+
+ <!-- Error Responce -->
+ <div *ngIf ="!area">  
+    <img margin-top src="../../assets/imgs/404.png"> 
+    <h1 text-center style="margin-top: 40px;margin-bottom: 80px;font-family: 'Courier New', Courier, monospace;color:red"><b>Something went wrong !!</b></h1>
+    <button ion-button  block large color="secondary" style="margin: auto;display: block" (click)="returnHome()">Go Back</button>     
+ </div>
+
+</ion-content>
